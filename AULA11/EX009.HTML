@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1> Sistema de Nacionalidade</h1>
+    Digite o nome do país: <input type= "text" name= "txtpais" id= "txtpais">
+    <input type= "button" value= "Verificar" onclick= "verificarnacionalidade()">
+    <div id= res>
+
+    </div>
+
+    <script>
+        function verificarnacionalidade() {
+            var txtpais = document.getElementById('txtpais')
+            var res = document.getElementById('res')
+            var vel = String(txtpais.value)
+            if (vel == "Brasil") {
+                res.innerHTML += `Sua nacionalidade é <strong>BRASILEIRO</strong>`
+            }else{
+                res.innerHTML += `Sua nacionalidade é <strong>ESTRANGEIRO</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
